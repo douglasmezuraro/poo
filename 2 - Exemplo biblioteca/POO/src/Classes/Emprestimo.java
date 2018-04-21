@@ -14,6 +14,11 @@ public class Emprestimo {
         this.usuario = usuario;
     }
 
+    public void devolverLivro() {
+        livro.setEmprestimo(true);
+        System.out.println("Livro devolvido");
+    }
+    
     public Usuario getUsuario() {
         return usuario;
     }
@@ -44,8 +49,6 @@ public class Emprestimo {
 
     public void setLivro(Livro livro) {
         this.livro = livro;
-    }
-    
-    
+    }        
      
 }

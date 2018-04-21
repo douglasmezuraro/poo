@@ -10,11 +10,11 @@ public class Principal {
                 "99947-7765");
         
         Livro livro = new Livro(
-                "O Senhor os Anéis: A Sociedade do Anel", 
-                "Tolkien", 
-                "Aventura", 
+                "O Senhor os Anéis: A Sociedade do Anel",
+                "Tolkien",
+                "Aventura",
                 "Allen & Unwin", 
-                1954, 
+                1954,
                 1000);
         
         Emprestimo emprestimo = new Emprestimo(
@@ -23,6 +23,10 @@ public class Principal {
                 livro, 
                 usuario);
         
+        emprestimo.getLivro().abrir();
+        emprestimo.getUsuario().lerLivro();
+        emprestimo.getLivro().fechar();
+        emprestimo.devolverLivro();        
     }
     
 }

@@ -15,6 +15,10 @@ public class Usuario {
         this.sexo = sexo;
         this.telefone = telefone;
     }
+    
+    public void lerLivro() {
+        System.out.println("Usuario.lerLivro()");
+    }
 
     public String getTelefone() {
         return telefone;

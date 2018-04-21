@@ -8,8 +8,11 @@ public class Livro {
     private String editora;
     private int ano;
     private int folhas;
+    private boolean emprestimo;
 
-    public Livro() {}
+    public Livro() {
+        this.emprestimo = false;
+    }
     
     public Livro(String titulo, String autor, String area, String editora, int ano, int folhas) {
         this.titulo = titulo;
@@ -18,6 +21,15 @@ public class Livro {
         this.editora = editora;
         this.ano = ano;
         this.folhas = folhas;
+        this.emprestimo = false;
+    }
+    
+    public void abrir() {
+        System.out.println("Livro.abrir()");
+    }
+    
+    public void fechar() {
+        System.out.println("Livro.fechar()");
     }
 
     public int getFolhas() {
@@ -66,6 +78,14 @@ public class Livro {
 
     public void setAno(int ano) {
         this.ano = ano;
+    }
+
+    public boolean isEmprestimo() {
+        return emprestimo;
+    }
+
+    public void setEmprestimo(boolean emprestimo) {
+        this.emprestimo = emprestimo;
     }
     
 }
